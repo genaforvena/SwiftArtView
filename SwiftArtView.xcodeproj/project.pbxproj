@@ -99,9 +99,9 @@
 		7471BE571CE4D9CA00D16775 /* SwiftArtView */ = {
 			isa = PBXGroup;
 			children = (
+				7471BE891CE4DA3100D16775 /* Models */,
+				7471BE881CE4DA1400D16775 /* View Controllers */,
 				7471BE581CE4D9CA00D16775 /* AppDelegate.swift */,
-				7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */,
-				7471BE5C1CE4D9CA00D16775 /* SecondViewController.swift */,
 				7471BE5E1CE4D9CA00D16775 /* Main.storyboard */,
 				7471BE611CE4D9CA00D16775 /* Assets.xcassets */,
 				7471BE631CE4D9CA00D16775 /* LaunchScreen.storyboard */,
@@ -126,6 +126,22 @@
 				7471BE7C1CE4D9CA00D16775 /* Info.plist */,
 			);
 			path = SwiftArtViewUITests;
+			sourceTree = "<group>";
+		};
+		7471BE881CE4DA1400D16775 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */,
+				7471BE5C1CE4D9CA00D16775 /* SecondViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7471BE891CE4DA3100D16775 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftArtView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.streetartview.SwiftArtView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -419,10 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftArtView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.streetartview.SwiftArtView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
