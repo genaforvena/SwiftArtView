@@ -1,0 +1,6 @@
+framework module Pods_SwiftArtView {
+  umbrella header "Pods-SwiftArtView-umbrella.h"
+
+  export *
+  module * { export * }
+}

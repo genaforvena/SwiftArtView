@@ -15,6 +15,7 @@
 		7471BE651CE4D9CA00D16775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7471BE631CE4D9CA00D16775 /* LaunchScreen.storyboard */; };
 		7471BE701CE4D9CA00D16775 /* SwiftArtViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE6F1CE4D9CA00D16775 /* SwiftArtViewTests.swift */; };
 		7471BE7B1CE4D9CA00D16775 /* SwiftArtViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE7A1CE4D9CA00D16775 /* SwiftArtViewUITests.swift */; };
+		C29A4F281FED13E9E047EF0C /* Pods_SwiftArtView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB20178AA8360D0108354EA /* Pods_SwiftArtView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E867DB2E5752008E14A8BA4 /* Pods-SwiftArtView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftArtView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftArtView/Pods-SwiftArtView.release.xcconfig"; sourceTree = "<group>"; };
+		1ECF371FDBBA304EE156A20B /* Pods-SwiftArtView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftArtView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftArtView/Pods-SwiftArtView.debug.xcconfig"; sourceTree = "<group>"; };
 		7471BE551CE4D9CA00D16775 /* SwiftArtView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftArtView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7471BE581CE4D9CA00D16775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		7471BE761CE4D9CA00D16775 /* SwiftArtViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftArtViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7471BE7A1CE4D9CA00D16775 /* SwiftArtViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftArtViewUITests.swift; sourceTree = "<group>"; };
 		7471BE7C1CE4D9CA00D16775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AB20178AA8360D0108354EA /* Pods_SwiftArtView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftArtView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29A4F281FED13E9E047EF0C /* Pods_SwiftArtView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				7471BE6E1CE4D9CA00D16775 /* SwiftArtViewTests */,
 				7471BE791CE4D9CA00D16775 /* SwiftArtViewUITests */,
 				7471BE561CE4D9CA00D16775 /* Products */,
+				D28E339D1F85827B514F0C43 /* Pods */,
+				D40A9521979AA0D0F07C9AB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +151,23 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		D28E339D1F85827B514F0C43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1ECF371FDBBA304EE156A20B /* Pods-SwiftArtView.debug.xcconfig */,
+				0E867DB2E5752008E14A8BA4 /* Pods-SwiftArtView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D40A9521979AA0D0F07C9AB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AB20178AA8360D0108354EA /* Pods_SwiftArtView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7471BE7F1CE4D9CA00D16775 /* Build configuration list for PBXNativeTarget "SwiftArtView" */;
 			buildPhases = (
+				1EBE48FE37A2A59ADFD3327E /* 📦 Check Pods Manifest.lock */,
 				7471BE511CE4D9CA00D16775 /* Sources */,
 				7471BE521CE4D9CA00D16775 /* Frameworks */,
 				7471BE531CE4D9CA00D16775 /* Resources */,
+				05D22162D136B4EDB64CC2AE /* 📦 Embed Pods Frameworks */,
+				5111B2DE7825A1C00DAA3D48 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +299,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D22162D136B4EDB64CC2AE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftArtView/Pods-SwiftArtView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EBE48FE37A2A59ADFD3327E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5111B2DE7825A1C00DAA3D48 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftArtView/Pods-SwiftArtView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7471BE511CE4D9CA00D16775 /* Sources */ = {
@@ -422,6 +497,7 @@
 		};
 		7471BE801CE4D9CA00D16775 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ECF371FDBBA304EE156A20B /* Pods-SwiftArtView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -436,6 +512,7 @@
 		};
 		7471BE811CE4D9CA00D16775 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E867DB2E5752008E14A8BA4 /* Pods-SwiftArtView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -513,6 +590,7 @@
 				7471BE811CE4D9CA00D16775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7471BE821CE4D9CA00D16775 /* Build configuration list for PBXNativeTarget "SwiftArtViewTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +599,7 @@
 				7471BE841CE4D9CA00D16775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7471BE851CE4D9CA00D16775 /* Build configuration list for PBXNativeTarget "SwiftArtViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +608,7 @@
 				7471BE871CE4D9CA00D16775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
