@@ -18,6 +18,7 @@
                     <navigationItem key="navigationItem" id="ccE-QD-6ME"/>
                     <connections>
                         <outlet property="mapView" destination="hgU-S3-ufZ" id="ggn-Pd-BMl"/>
+                        <segue destination="6Qp-YQ-FQl" kind="show" identifier="DetailArtObjectFromMap" id="AyI-Eu-iDg"/>
                     </connections>
                 </viewController>
             </objects>
@@ -174,4 +175,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AyI-Eu-iDg"/>
+    </inferredMetricsTieBreakers>
 </document>

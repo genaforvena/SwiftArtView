@@ -26,6 +26,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         centerMapOnLocation(nizhnyNovgorod)
+        mapView.delegate = self
         fetchArtWorks()
     }
     
@@ -41,6 +42,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton.init(type: .DetailDisclosure) as UIView
             }
             return view
         }
@@ -48,12 +50,21 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
-        print("view tapped")
+        if control == view.rightCalloutAccessoryView {
+            performSegueWithIdentifier("DetailArtObjectFromMap", sender: view)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DetailArtObjectFromMap" {
+            let destinationController = segue.destinationViewController as! DetailArtObjectViewController
+            destinationController.artObject = ((sender as! MKAnnotationView).annotation as! ArtWorkAnnotation).artwork
+        }
     }
     
     
     let regionRadius : Double = 6000
-    private func centerMapOnLocation(location: CLLocation) {
+    func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
