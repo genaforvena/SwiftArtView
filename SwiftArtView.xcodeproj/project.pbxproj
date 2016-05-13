@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		745306321CE5962F00609C18 /* StreetArtViewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745306311CE5962F00609C18 /* StreetArtViewAPI.swift */; };
 		745306341CE5976C00609C18 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745306331CE5976C00609C18 /* ArtWork.swift */; };
+		745306371CE5A06E00609C18 /* ArtObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745306361CE5A06E00609C18 /* ArtObjectCell.swift */; };
 		7471BE591CE4D9CA00D16775 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE581CE4D9CA00D16775 /* AppDelegate.swift */; };
 		7471BE5B1CE4D9CA00D16775 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */; };
-		7471BE5D1CE4D9CA00D16775 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE5C1CE4D9CA00D16775 /* SecondViewController.swift */; };
+		7471BE5D1CE4D9CA00D16775 /* ArtListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE5C1CE4D9CA00D16775 /* ArtListViewController.swift */; };
 		7471BE601CE4D9CA00D16775 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7471BE5E1CE4D9CA00D16775 /* Main.storyboard */; };
 		7471BE621CE4D9CA00D16775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7471BE611CE4D9CA00D16775 /* Assets.xcassets */; };
 		7471BE651CE4D9CA00D16775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7471BE631CE4D9CA00D16775 /* LaunchScreen.storyboard */; };
@@ -42,10 +43,11 @@
 		1ECF371FDBBA304EE156A20B /* Pods-SwiftArtView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftArtView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftArtView/Pods-SwiftArtView.debug.xcconfig"; sourceTree = "<group>"; };
 		745306311CE5962F00609C18 /* StreetArtViewAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetArtViewAPI.swift; sourceTree = "<group>"; };
 		745306331CE5976C00609C18 /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
+		745306361CE5A06E00609C18 /* ArtObjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtObjectCell.swift; sourceTree = "<group>"; };
 		7471BE551CE4D9CA00D16775 /* SwiftArtView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftArtView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7471BE581CE4D9CA00D16775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7471BE5C1CE4D9CA00D16775 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7471BE5C1CE4D9CA00D16775 /* ArtListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListViewController.swift; sourceTree = "<group>"; };
 		7471BE5F1CE4D9CA00D16775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7471BE611CE4D9CA00D16775 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7471BE641CE4D9CA00D16775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		745306351CE5A04900609C18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				745306361CE5A06E00609C18 /* ArtObjectCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		7471BE4C1CE4D9CA00D16775 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 			children = (
 				7471BE891CE4DA3100D16775 /* Models */,
 				7471BE881CE4DA1400D16775 /* View Controllers */,
+				745306351CE5A04900609C18 /* Views */,
 				7471BE581CE4D9CA00D16775 /* AppDelegate.swift */,
 				745306311CE5962F00609C18 /* StreetArtViewAPI.swift */,
 				7471BE5E1CE4D9CA00D16775 /* Main.storyboard */,
@@ -144,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */,
-				7471BE5C1CE4D9CA00D16775 /* SecondViewController.swift */,
+				7471BE5C1CE4D9CA00D16775 /* ArtListViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -359,8 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745306371CE5A06E00609C18 /* ArtObjectCell.swift in Sources */,
 				745306321CE5962F00609C18 /* StreetArtViewAPI.swift in Sources */,
-				7471BE5D1CE4D9CA00D16775 /* SecondViewController.swift in Sources */,
+				7471BE5D1CE4D9CA00D16775 /* ArtListViewController.swift in Sources */,
 				7471BE591CE4D9CA00D16775 /* AppDelegate.swift in Sources */,
 				7471BE5B1CE4D9CA00D16775 /* FirstViewController.swift in Sources */,
 				745306341CE5976C00609C18 /* ArtWork.swift in Sources */,

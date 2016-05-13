@@ -15,7 +15,7 @@ final class StreetArtViewAPI {
     static let sharedInstance = StreetArtViewAPI()
     
     // API base URL.
-    private let apiBaseURL = "http://street-art-server.heroku.com/"
+    private let apiBaseURL = "https://street-art-server.herokuapp.com/"
     
     func getArtWorksList(completion: [ArtWork] -> Void) {
         get("artworks") { JSON in
