@@ -11,6 +11,7 @@
 		745306341CE5976C00609C18 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745306331CE5976C00609C18 /* ArtWork.swift */; };
 		745306371CE5A06E00609C18 /* ArtObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745306361CE5A06E00609C18 /* ArtObjectCell.swift */; };
 		745306391CE5AF0C00609C18 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745306381CE5AF0C00609C18 /* Photo.swift */; };
+		7453063B1CE5E0B500609C18 /* DetailArtObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7453063A1CE5E0B500609C18 /* DetailArtObjectViewController.swift */; };
 		7471BE591CE4D9CA00D16775 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE581CE4D9CA00D16775 /* AppDelegate.swift */; };
 		7471BE5B1CE4D9CA00D16775 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */; };
 		7471BE5D1CE4D9CA00D16775 /* ArtListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471BE5C1CE4D9CA00D16775 /* ArtListViewController.swift */; };
@@ -46,6 +47,7 @@
 		745306331CE5976C00609C18 /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
 		745306361CE5A06E00609C18 /* ArtObjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtObjectCell.swift; sourceTree = "<group>"; };
 		745306381CE5AF0C00609C18 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7453063A1CE5E0B500609C18 /* DetailArtObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailArtObjectViewController.swift; sourceTree = "<group>"; };
 		7471BE551CE4D9CA00D16775 /* SwiftArtView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftArtView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7471BE581CE4D9CA00D16775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				7471BE5A1CE4D9CA00D16775 /* FirstViewController.swift */,
 				7471BE5C1CE4D9CA00D16775 /* ArtListViewController.swift */,
+				7453063A1CE5E0B500609C18 /* DetailArtObjectViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				7471BE5D1CE4D9CA00D16775 /* ArtListViewController.swift in Sources */,
 				7471BE591CE4D9CA00D16775 /* AppDelegate.swift in Sources */,
 				7471BE5B1CE4D9CA00D16775 /* FirstViewController.swift in Sources */,
+				7453063B1CE5E0B500609C18 /* DetailArtObjectViewController.swift in Sources */,
 				745306341CE5976C00609C18 /* ArtWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

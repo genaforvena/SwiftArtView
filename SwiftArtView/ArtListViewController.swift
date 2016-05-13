@@ -67,9 +67,8 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
     // MARK: UICollectionViewDelegateFlowLayout
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let spacing = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).sectionInset.left
-        let width = (view.bounds.width - 3 * spacing) / 2
-        return CGSize(width: width, height: width + 50)
+        let width = (view.bounds.width - 3) / 3
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
@@ -79,11 +78,10 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
     // MARK: UIStoryboardSegue Handling
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let artWorkCell = sender as! ArtObjectCell
+        let artWorkCell = sender as! ArtObjectCell
         
-        // TODO
-//        let productDetailViewController = segue.destinationViewController as! ProductDetailViewController
-//        productDetailViewController.product = productCell.product
+        let artObjectDetailViewController = segue.destinationViewController as! DetailArtObjectViewController
+        artObjectDetailViewController.artObject = artWorkCell.artWork
     }
     
     // MARK: API
