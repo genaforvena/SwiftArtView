@@ -14,6 +14,7 @@ struct ArtWork {
     let name: String
     let description: String
     // TODO add photos array
+    let photos: [Photo]
 }
 
 extension ArtWork : Decodable {
@@ -21,7 +22,8 @@ extension ArtWork : Decodable {
         return try ArtWork(
             id: j => "id",
             name: j => "name",
-            description: j => "description"
+            description: j => "description",
+            photos: j => "photos" as [Photo]
         )
     }
 }

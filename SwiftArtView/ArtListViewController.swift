@@ -79,7 +79,7 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
     // MARK: UIStoryboardSegue Handling
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let artWorkCell = sender as! ArtObjectCell
+//        let artWorkCell = sender as! ArtObjectCell
         
         // TODO
 //        let productDetailViewController = segue.destinationViewController as! ProductDetailViewController

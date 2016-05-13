@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 final class ArtObjectCell : UICollectionViewCell {
     static let reuseIdentifier = "ArtObjectCell"
@@ -32,13 +33,16 @@ final class ArtObjectCell : UICollectionViewCell {
         
         nameLabel.text = artWork.name
         
-//        let size = CGSize(width: imageView.bounds.width, height: imageView.bounds.height)
-//        imageView.af_setImageWithURL(
-//            product.imageURL,
-//            placeholderImage: UIImage(named: "Placeholder"),
-//            filter: AspectScaledToFillSizeFilter(size: size),
-//            imageTransition: .CrossDissolve(0.6)
-//        )
+        guard let url = artWork.photos[0].url else {
+            return
+        }
+        let size = CGSize(width: image.bounds.width, height: image.bounds.height)
+        image.af_setImageWithURL(
+            NSURL.fileURLWithPath(url),
+            placeholderImage: UIImage(named: "Placeholder"),
+            filter: AspectScaledToFillSizeFilter(size: size),
+            imageTransition: .CrossDissolve(0.6)
+        )
     }
 
 }
