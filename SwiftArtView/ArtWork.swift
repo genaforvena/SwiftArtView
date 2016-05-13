@@ -13,7 +13,7 @@ struct ArtWork {
     let id: String
     let name: String
     let description: String
-    // TODO add photos array
+    let location: Location
     let photos: [Photo]
 }
 
@@ -23,6 +23,7 @@ extension ArtWork : Decodable {
             id: j => "id",
             name: j => "name",
             description: j => "description",
+            location: j => "location",
             photos: j => "photos" as [Photo]
         )
     }
