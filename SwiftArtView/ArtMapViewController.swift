@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 
+let nizhnyNovgorod = CLLocation(latitude: 56.327530, longitude: 44.000717)
+
 class ArtMapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var mapView: MKMapView!
@@ -23,7 +25,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        centerMapOnLocation(nizhnyNovgorod)
         fetchArtWorks()
     }
     
@@ -32,11 +34,10 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
             let identifier = "pin"
             var view: MKPinAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
-                as? MKPinAnnotationView { // 2
+                as? MKPinAnnotationView {
                 dequeuedView.annotation = annotation
                 view = dequeuedView
             } else {
-                // 3
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
@@ -46,7 +47,18 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         return nil
     }
     
-    // We need to upload the contacts before this.
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
+        print("view tapped")
+    }
+    
+    
+    let regionRadius : Double = 6000
+    private func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
     func fetchArtWorks() {
         StreetArtViewAPI.sharedInstance.getArtWorksList() { artWorks in
             self.artWorks = artWorks
@@ -55,7 +67,10 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
 }
 
 class ArtWorkAnnotation : NSObject, MKAnnotation {
+    let artwork: ArtWork!
+    
     init(artWork: ArtWork) {
+        self.artwork = artWork
         coordinate = CLLocationCoordinate2D.init(latitude: artWork.location.lat, longitude: artWork.location.lng)
         title = artWork.name
     }
