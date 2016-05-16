@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailArtObjectViewController : UIViewController {
     
-    var artObject: ArtWork!
+    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var authorLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var artObject: ArtWork!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nameLabel.text = artObject.name
+    
+        titleLabel.text = artObject.name
+        descriptionLabel.text = artObject.description
+        addressLabel.text = artObject.location.address
     }
 }
