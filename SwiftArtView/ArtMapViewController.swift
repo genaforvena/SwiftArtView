@@ -58,6 +58,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DetailArtObjectFromMap" {
             let destinationController = segue.destinationViewController as! DetailArtObjectViewController
+            destinationController.hidesBottomBarWhenPushed = true
             destinationController.artObject = ((sender as! MKAnnotationView).annotation as! ArtWorkAnnotation).artwork
         }
     }

@@ -81,6 +81,7 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
         let artWorkCell = sender as! ArtObjectCell
         
         let artObjectDetailViewController = segue.destinationViewController as! DetailArtObjectViewController
+        artObjectDetailViewController.hidesBottomBarWhenPushed = true
         artObjectDetailViewController.artObject = artWorkCell.artWork
     }
     
