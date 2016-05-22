@@ -28,7 +28,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         centerMapOnLocation(nizhnyNovgorod)
         mapView.delegate = self
-//        fetchArtWorks()
+        fetchArtWorks()
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -72,9 +72,9 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-//    func fetchArtWorks() {
-//        self.artArtWorksStorage.instance.listArtWorks()
-//    }
+    func fetchArtWorks() {
+        self.artWorks = ArtWorksStorage.instance.listArtWorks()
+    }
 }
 
 class ArtWorkAnnotation : NSObject, MKAnnotation {
