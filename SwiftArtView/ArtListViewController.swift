@@ -29,7 +29,7 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
         
         // Setup the refresh control.
         refreshControl = UIRefreshControl()
-        refreshControl!.addTarget(self, action: #selector(ArtListViewController.fetchArtWorks), forControlEvents: .ValueChanged)
+        refreshControl!.addTarget(self, action: #selector(ArtListViewController.refetchArtWorks), forControlEvents: .ValueChanged)
         collectionView!.addSubview(refreshControl!)
         
         collectionView!.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: ArtListViewController.emptyFooterReusableID)
@@ -93,6 +93,10 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
         self.refreshControl!.beginRefreshing()
         self.artWorks = ArtWorksStorage.instance.listArtWorks()
         self.refreshControl!.endRefreshing()
+    }
+    
+    func refetchArtWorks() {
+        ArtFetcher.instance.fetchAndStoreArtworks { self.refreshControl!.endRefreshing() }
     }
 }
 

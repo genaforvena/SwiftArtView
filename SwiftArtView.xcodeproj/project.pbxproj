@@ -136,9 +136,9 @@
 		7471BE571CE4D9CA00D16775 /* SwiftArtView */ = {
 			isa = PBXGroup;
 			children = (
+				74C059001CF1C2F300BA6BB7 /* Models */,
 				745306351CE5A04900609C18 /* Views */,
 				7471BE881CE4DA1400D16775 /* View Controllers */,
-				74C059001CF1C2F300BA6BB7 /* Models */,
 				74C058FD1CF1C1AD00BA6BB7 /* Storage */,
 				74C058FA1CF1C0FF00BA6BB7 /* Network */,
 				7471BE581CE4D9CA00D16775 /* AppDelegate.swift */,

@@ -11,9 +11,10 @@ import Foundation
 class ArtFetcher {
     static let instance = ArtFetcher()
     
-    func fetchAndStoreArtworks() {
+    func fetchAndStoreArtworks(completion: () -> Void = { }) {
         StreetArtViewAPI.sharedInstance.getArtWorksList { artworks in
             ArtWorksStorage.instance.insertArtworks(artworks)
+            completion()
         }
     }
     
