@@ -96,7 +96,10 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     func refetchArtWorks() {
-        ArtFetcher.instance.fetchAndStoreArtworks { self.refreshControl!.endRefreshing() }
+        ArtFetcher.instance.fetchAndStoreArtworks {
+            self.artWorks = ArtWorksStorage.instance.listArtWorks()
+            self.refreshControl!.endRefreshing()
+        }
     }
 }
 
