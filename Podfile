@@ -6,4 +6,7 @@ target 'SwiftArtView' do
     pod 'Alamofire', '~> 2.0'
     pod 'AlamofireImage', '~> 1.0'
     pod 'Decodable', '~> 0.4.2'
+    pod 'RealmSwift', '~> 0.102.0'
+    pod 'RxSwift',    '~> 2.0'
+    pod 'RxCocoa',    '~> 2.0'
 end
