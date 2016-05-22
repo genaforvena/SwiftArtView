@@ -1,27 +1,44 @@
 PODS:
+  - ABFRealmMapView (1.8):
+    - RBQFetchedResultsController (>= 2.0)
+    - Realm (>= 0.98)
   - Alamofire (2.0.2)
   - AlamofireImage (1.1.2):
     - Alamofire (~> 2.0)
   - Decodable (0.4.2)
+  - RBQFetchedResultsController (4.0.3):
+    - Realm (>= 0.99.1)
   - Realm (0.102.0):
     - Realm/Headers (= 0.102.0)
   - Realm/Headers (0.102.0)
+  - RealmMapView (1.8):
+    - ABFRealmMapView (>= 1.8)
+    - RealmSwift (>= 0.98)
+    - SwiftFetchedResultsController (>= 2.4.3)
   - RealmSwift (0.102.0):
     - Realm (= 0.102.0)
+  - SwiftFetchedResultsController (4.0.3):
+    - RBQFetchedResultsController (>= 4.0.3)
+    - RealmSwift (>= 0.99.1)
 
 DEPENDENCIES:
   - Alamofire (~> 2.0)
   - AlamofireImage (~> 1.0)
   - Decodable (~> 0.4.2)
+  - RealmMapView
   - RealmSwift (~> 0.102.0)
 
 SPEC CHECKSUMS:
+  ABFRealmMapView: b440d11a5666a4575847a8e02313e57c370a4d38
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   AlamofireImage: dc3d3de5d095fd9545b144ba8f6da5bfc539512a
   Decodable: b1cd96ad9f722721bc98b0310952214a47f71d6a
+  RBQFetchedResultsController: fcc29d033acb7875af5c85976bd4f1ddb4ff75bc
   Realm: 5d219f9037e3ec2019c599b8227bfc95433cb10e
+  RealmMapView: e7857bc757f54baf81133b24e91383da292dbf5e
   RealmSwift: e6f436f9fea1c57b9ad6d1c46d57562c845f3c4c
+  SwiftFetchedResultsController: 5ba43769b1198195e087f37536c99611505da5ec
 
-PODFILE CHECKSUM: b83d375ba96919958bf0ab01c466bbf580b0f256
+PODFILE CHECKSUM: e7e14b888c707b5fb0f1d6772765a2cc6f89c2cb
 
 COCOAPODS: 1.0.0

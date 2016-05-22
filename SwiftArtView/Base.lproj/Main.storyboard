@@ -11,9 +11,16 @@
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="ArtMapViewController" customModule="SwiftArtView" customModuleProvider="target" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="hgU-S3-ufZ">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="hgU-S3-ufZ" customClass="RealmMapView" customModule="RealmMapView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="entityName" value="ArtworkRealm"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="latitudeKeyPath" value="lat"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="longitudeKeyPath" value="lng"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleKeyPath" value="name"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="subtitleKeyPath" value="address"/>
+                        </userDefinedRuntimeAttributes>
                     </mapView>
                     <navigationItem key="navigationItem" id="ccE-QD-6ME"/>
                     <connections>

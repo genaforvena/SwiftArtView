@@ -7,4 +7,5 @@ target 'SwiftArtView' do
     pod 'AlamofireImage', '~> 1.0'
     pod 'Decodable', '~> 0.4.2'
     pod 'RealmSwift', '~> 0.102.0'
+    pod 'RealmMapView'
 end

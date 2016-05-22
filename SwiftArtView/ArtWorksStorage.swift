@@ -26,12 +26,9 @@ class ArtWorksStorage {
             realmArtwork.name = artwork.name
             realmArtwork.desc = artwork.description
             
-            let realmLocation = LocationRealm()
-            realmLocation.address = artwork.location.address
-            realmLocation.lat = artwork.location.lat
-            realmLocation.lng = artwork.location.lng
-            
-            realmArtwork.location = realmLocation
+            realmArtwork.address = artwork.location.address
+            realmArtwork.lat = artwork.location.lat
+            realmArtwork.lng = artwork.location.lng
             
             if artwork.photos.count > 0 {
                 for photo in artwork.photos {

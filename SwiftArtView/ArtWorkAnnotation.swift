@@ -14,7 +14,7 @@ class ArtWorkAnnotation : NSObject, MKAnnotation {
     
     init(artWork: ArtworkRealm) {
         self.artwork = artWork
-        coordinate = CLLocationCoordinate2D.init(latitude: artWork.location!.lat, longitude: artWork.location!.lng)
+        coordinate = CLLocationCoordinate2D.init(latitude: artWork.lat, longitude: artWork.lng)
         title = artWork.name
     }
     

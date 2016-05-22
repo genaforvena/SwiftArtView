@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ABFRealmMapView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,7 +29,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RBQFetchedResultsController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmMapView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,15 +49,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftFetchedResultsController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1E7FC72333BF7907E334DB6F4A9B3E2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4B2F30D90D85A544E9EFE2A49D392C25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D5CDABA8FC2F06BD37C3D043DDBB1EE</key>
+		<key>62B8F58FE4ADF763E9159A73EEA2E2C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91DAF7FDF1CF86817989CD0E6E8A915F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,12 +82,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB6BCACE148391C7F2E02886FC88F32E</key>
+		<key>B0BC46E5DB47C6D771F5DA5E5956A3B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC1EBD77EBAD08E24B1068505A4DC9A2</key>
+		<key>C33230915F6390B2509307C548275A0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD3C2DE7001A693E340E254452F1CCE8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE395D26BCE5218E5E88E00B8AAB0401</key>
 		<dict>
 			<key>primary</key>
 			<true/>

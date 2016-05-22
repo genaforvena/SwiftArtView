@@ -36,10 +36,10 @@ class DetailArtObjectViewController : UIViewController {
         } else {
             descriptionLabel.text = artObject.desc
         }
-        addressLabel.text = artObject.location!.address
+        addressLabel.text = artObject.address
         
         mapView.addAnnotation(ArtWorkAnnotation(artWork: artObject))
-        centerMapOnLocation(mapView, location: CLLocation(latitude: artObject.location!.lat, longitude: artObject.location!.lng), regionRadius: 2000)
+        centerMapOnLocation(mapView, location: CLLocation(latitude: artObject.lat, longitude: artObject.lng), regionRadius: 2000)
         
         let url = artObject.photos[0].url
         
