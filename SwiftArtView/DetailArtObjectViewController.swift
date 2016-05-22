@@ -36,5 +36,8 @@ class DetailArtObjectViewController : UIViewController {
             descriptionLabel.text = artObject.desc
         }
         addressLabel.text = artObject.location!.address
+        
+        mapView.addAnnotation(ArtWorkAnnotation(artWork: artObject))
+        centerMapOnLocation(mapView, location: CLLocation(latitude: artObject.location!.lat, longitude: artObject.location!.lng), regionRadius: 2000)
     }
 }

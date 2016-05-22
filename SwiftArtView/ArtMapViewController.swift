@@ -15,6 +15,7 @@ let nizhnyNovgorod = CLLocation(latitude: 56.327530, longitude: 44.000717)
 class ArtMapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var mapView: MKMapView!
+    let regionRadius : Double = 6000
     
     var artWorks: Results<ArtworkRealm>! {
         didSet {
@@ -26,7 +27,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        centerMapOnLocation(nizhnyNovgorod)
+        centerMapOnLocation(mapView, location: nizhnyNovgorod, regionRadius: regionRadius)
         mapView.delegate = self
         fetchArtWorks()
     }
@@ -64,29 +65,13 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    
-    let regionRadius : Double = 6000
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius * 2.0, regionRadius * 2.0)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-    
     func fetchArtWorks() {
         self.artWorks = ArtWorksStorage.instance.listArtWorks()
     }
 }
 
-class ArtWorkAnnotation : NSObject, MKAnnotation {
-    let artwork: ArtworkRealm!
-    
-    init(artWork: ArtworkRealm) {
-        self.artwork = artWork
-        coordinate = CLLocationCoordinate2D.init(latitude: artWork.location!.lat, longitude: artWork.location!.lng)
-        title = artWork.name
-    }
-    
-    var coordinate: CLLocationCoordinate2D
-    var title: String?
+func centerMapOnLocation(mapView: MKMapView, location: CLLocation, regionRadius: Double) {
+    let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                              regionRadius * 2.0, regionRadius * 2.0)
+    mapView.setRegion(coordinateRegion, animated: true)
 }
-
