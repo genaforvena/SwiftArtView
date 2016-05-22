@@ -26,6 +26,7 @@
 		74C059021CF1C32000BA6BB7 /* ArtworkRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059011CF1C32000BA6BB7 /* ArtworkRealm.swift */; };
 		74C059041CF1C4D800BA6BB7 /* PhotoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059031CF1C4D800BA6BB7 /* PhotoRealm.swift */; };
 		74C059061CF1C52C00BA6BB7 /* LocationRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059051CF1C52C00BA6BB7 /* LocationRealm.swift */; };
+		74C059081CF2067F00BA6BB7 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059071CF2067F00BA6BB7 /* Author.swift */; };
 		C29A4F281FED13E9E047EF0C /* Pods_SwiftArtView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB20178AA8360D0108354EA /* Pods_SwiftArtView.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		74C059011CF1C32000BA6BB7 /* ArtworkRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkRealm.swift; sourceTree = "<group>"; };
 		74C059031CF1C4D800BA6BB7 /* PhotoRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRealm.swift; sourceTree = "<group>"; };
 		74C059051CF1C52C00BA6BB7 /* LocationRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRealm.swift; sourceTree = "<group>"; };
+		74C059071CF2067F00BA6BB7 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		7AB20178AA8360D0108354EA /* Pods_SwiftArtView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftArtView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				745306331CE5976C00609C18 /* ArtWork.swift */,
 				745306381CE5AF0C00609C18 /* Photo.swift */,
 				7453063C1CE5E7D100609C18 /* Location.swift */,
+				74C059071CF2067F00BA6BB7 /* Author.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				74C058FF1CF1C1C400BA6BB7 /* ArtWorksStorage.swift in Sources */,
 				7471BE591CE4D9CA00D16775 /* AppDelegate.swift in Sources */,
 				7471BE5B1CE4D9CA00D16775 /* ArtMapViewController.swift in Sources */,
+				74C059081CF2067F00BA6BB7 /* Author.swift in Sources */,
 				74C058FC1CF1C12100BA6BB7 /* ArtFetcher.swift in Sources */,
 				74C059061CF1C52C00BA6BB7 /* LocationRealm.swift in Sources */,
 				74C059041CF1C4D800BA6BB7 /* PhotoRealm.swift in Sources */,

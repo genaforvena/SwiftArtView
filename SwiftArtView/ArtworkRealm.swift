@@ -14,6 +14,7 @@ class ArtworkRealm : Object {
     dynamic var name: String = ""
     dynamic var desc: String?
     dynamic var location: LocationRealm?
+    dynamic var authors: String = ""
     let photos = List<PhotoRealm>()
     
     override static func primaryKey() -> String? {

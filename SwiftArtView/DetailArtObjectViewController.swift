@@ -29,7 +29,12 @@ class DetailArtObjectViewController : UIViewController {
         super.viewDidLoad()
     
         titleLabel.text = artObject.name
-        descriptionLabel.text = artObject.description
+        authorLabel.text = artObject.authors
+        if artObject.description.isEmpty {
+            descriptionLabel.hidden = true
+        } else {
+            descriptionLabel.text = artObject.desc
+        }
         addressLabel.text = artObject.location!.address
     }
 }

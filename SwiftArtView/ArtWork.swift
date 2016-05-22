@@ -13,6 +13,7 @@ struct ArtWork {
     let id: String
     let name: String
     let description: String
+    let authors: [Author]
     let location: Location
     let photos: [Photo]
 }
@@ -23,6 +24,7 @@ extension ArtWork : Decodable {
             id: j => "id",
             name: j => "name",
             description: j => "description",
+            authors: j => "artists" as [Author],
             location: j => "location",
             photos: j => "photos" as [Photo]
         )
