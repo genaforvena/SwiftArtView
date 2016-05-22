@@ -18,12 +18,6 @@ final class ArtObjectCell : UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    override func awakeFromNib() {
-        layer.masksToBounds = false
-        layer.borderWidth = 0.5
-        layer.cornerRadius = 3
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
     }
