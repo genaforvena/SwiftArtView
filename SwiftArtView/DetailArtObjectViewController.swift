@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import AlamofireImage
 
 class DetailArtObjectViewController : UIViewController {
     
@@ -39,5 +40,15 @@ class DetailArtObjectViewController : UIViewController {
         
         mapView.addAnnotation(ArtWorkAnnotation(artWork: artObject))
         centerMapOnLocation(mapView, location: CLLocation(latitude: artObject.location!.lat, longitude: artObject.location!.lng), regionRadius: 2000)
+        
+        let url = artObject.photos[0].url
+        
+        let size = CGSize(width: imageView.bounds.width, height: imageView.bounds.height)
+        imageView.af_setImageWithURL(
+            NSURL(string: url)!,
+            placeholderImage: UIImage(named: "Placeholder"),
+            filter: AspectScaledToFillSizeFilter(size: size),
+            imageTransition: .CrossDissolve(0.6)
+        )
     }
 }

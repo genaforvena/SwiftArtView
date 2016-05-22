@@ -19,7 +19,8 @@ class ArtWorksStorage {
     
     func insertArtworks(artworks: [ArtWork]) {
         realm.beginWrite()
-        artworks.forEach { artwork in
+        
+        for artwork in artworks {
             let realmArtwork = ArtworkRealm()
             realmArtwork.id = artwork.id
             realmArtwork.name = artwork.name

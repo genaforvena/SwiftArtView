@@ -33,16 +33,17 @@ final class ArtObjectCell : UICollectionViewCell {
         
         nameLabel.text = artWork.name
         
-//        guard let url = artWork.photos[0].url else {
-//            return
-//        }
-//        let size = CGSize(width: image.bounds.width, height: image.bounds.height)
-//        image.af_setImageWithURL(
-//            NSURL.fileURLWithPath(url),
-//            placeholderImage: UIImage(named: "Placeholder"),
-//            filter: AspectScaledToFillSizeFilter(size: size),
-//            imageTransition: .CrossDissolve(0.6)
-//        )
+        if artWork.photos.count > 0 {
+            let url = artWork.photos[0].url
+            
+            let size = CGSize(width: image.bounds.width, height: image.bounds.height)
+            image.af_setImageWithURL(
+                NSURL(string: url)!,
+                placeholderImage: UIImage(named: "Placeholder"),
+                filter: AspectScaledToFillSizeFilter(size: size),
+                imageTransition: .CrossDissolve(0.6)
+            )
+        }
     }
 
 }
