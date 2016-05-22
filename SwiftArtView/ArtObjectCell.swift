@@ -12,7 +12,7 @@ import AlamofireImage
 final class ArtObjectCell : UICollectionViewCell {
     static let reuseIdentifier = "ArtObjectCell"
     
-    var artWork: ArtWork!
+    var artWork: ArtworkRealm!
     
     @IBOutlet weak var image: UIImageView!
     
@@ -28,21 +28,21 @@ final class ArtObjectCell : UICollectionViewCell {
         super.prepareForReuse()
     }
     
-    func configureWithArtWork(artWork: ArtWork) {
+    func configureWithArtWork(artWork: ArtworkRealm) {
         self.artWork = artWork
         
         nameLabel.text = artWork.name
         
-        guard let url = artWork.photos[0].url else {
-            return
-        }
-        let size = CGSize(width: image.bounds.width, height: image.bounds.height)
-        image.af_setImageWithURL(
-            NSURL.fileURLWithPath(url),
-            placeholderImage: UIImage(named: "Placeholder"),
-            filter: AspectScaledToFillSizeFilter(size: size),
-            imageTransition: .CrossDissolve(0.6)
-        )
+//        guard let url = artWork.photos[0].url else {
+//            return
+//        }
+//        let size = CGSize(width: image.bounds.width, height: image.bounds.height)
+//        image.af_setImageWithURL(
+//            NSURL.fileURLWithPath(url),
+//            placeholderImage: UIImage(named: "Placeholder"),
+//            filter: AspectScaledToFillSizeFilter(size: size),
+//            imageTransition: .CrossDissolve(0.6)
+//        )
     }
 
 }

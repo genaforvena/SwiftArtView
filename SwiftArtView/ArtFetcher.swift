@@ -13,8 +13,7 @@ class ArtFetcher {
     
     func fetchAndStoreArtworks() {
         StreetArtViewAPI.sharedInstance.getArtWorksList { artworks in
-            
-            
+            ArtWorksStorage.instance.insertArtworks(artworks)
         }
     }
     

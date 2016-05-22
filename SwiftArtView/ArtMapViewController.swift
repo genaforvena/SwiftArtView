@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 let nizhnyNovgorod = CLLocation(latitude: 56.327530, longitude: 44.000717)
 
@@ -15,7 +16,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var mapView: MKMapView!
     
-    var artWorks: [ArtWork] = [] {
+    var artWorks: Results<ArtworkRealm>! {
         didSet {
             artWorks.forEach { artwork in
                 mapView.addAnnotation(ArtWorkAnnotation(artWork: artwork))
@@ -27,7 +28,7 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         centerMapOnLocation(nizhnyNovgorod)
         mapView.delegate = self
-        fetchArtWorks()
+//        fetchArtWorks()
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -71,19 +72,17 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func fetchArtWorks() {
-        StreetArtViewAPI.sharedInstance.getArtWorksList() { artWorks in
-            self.artWorks = artWorks
-        }
-    }
+//    func fetchArtWorks() {
+//        self.artArtWorksStorage.instance.listArtWorks()
+//    }
 }
 
 class ArtWorkAnnotation : NSObject, MKAnnotation {
-    let artwork: ArtWork!
+    let artwork: ArtworkRealm!
     
-    init(artWork: ArtWork) {
+    init(artWork: ArtworkRealm) {
         self.artwork = artWork
-        coordinate = CLLocationCoordinate2D.init(latitude: artWork.location.lat, longitude: artWork.location.lng)
+        coordinate = CLLocationCoordinate2D.init(latitude: artWork.location!.lat, longitude: artWork.location!.lng)
         title = artWork.name
     }
     

@@ -23,13 +23,13 @@ class DetailArtObjectViewController : UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var artObject: ArtWork!
+    var artObject: ArtworkRealm!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         titleLabel.text = artObject.name
         descriptionLabel.text = artObject.description
-        addressLabel.text = artObject.location.address
+        addressLabel.text = artObject.location!.address
     }
 }

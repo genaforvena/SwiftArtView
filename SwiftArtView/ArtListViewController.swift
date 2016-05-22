@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ArtListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     // MARK: Properties
     static let emptyFooterReusableID = "EmptyFooter"
     
-    var artWorks: [ArtWork] = [] {
+    var artWorks: Results<ArtworkRealm>! {
         didSet {
             self.collectionView!.reloadData()
         }
@@ -90,10 +91,8 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
     // We need to upload the contacts before this.
     func fetchArtWorks() {
         self.refreshControl!.beginRefreshing()
-        StreetArtViewAPI.sharedInstance.getArtWorksList() { artWorks in
-            self.artWorks = artWorks
-            self.refreshControl!.endRefreshing()
-        }
+        self.artWorks = ArtWorksStorage.instance.listArtWorks()
+        self.refreshControl!.endRefreshing()
     }
 }
 
