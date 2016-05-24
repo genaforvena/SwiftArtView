@@ -35,15 +35,9 @@ class ArtWorksStorage {
             realmArtwork.lng = artwork.location.lng
             
             if artwork.photos.count > 0 {
-                for photo in artwork.photos {
-                    guard let name = photo.name else { continue }
-                    guard let url = photo.url else { continue }
-                    
-                    let realmPhoto = PhotoRealm()
-                    realmPhoto.name = name
-                    realmPhoto.url = url
-                    realmArtwork.photos.append(realmPhoto)
-                }
+                let photo = artwork.photos[0]
+                guard let url = photo.url else { continue }
+                realmArtwork.photoUrl = url
             }
             
             if artwork.authors.count > 0 {

@@ -23,17 +23,13 @@ final class ArtObjectCell : UICollectionViewCell {
     func configureWithArtWork(artWork: ArtworkRealm) {
         self.artWork = artWork
         
-        if artWork.photos.count > 0 {
-            let url = artWork.photos[0].url
-            
-            let size = CGSize(width: image.bounds.width, height: image.bounds.height)
-            image.af_setImageWithURL(
-                NSURL(string: url)!,
-                placeholderImage: UIImage(named: "Placeholder"),
-                filter: AspectScaledToFillSizeFilter(size: size),
-                imageTransition: .CrossDissolve(0.6)
-            )
-        }
+        let size = CGSize(width: image.bounds.width, height: image.bounds.height)
+        image.af_setImageWithURL(
+            NSURL(string: artWork.photoUrl)!,
+            placeholderImage: UIImage(named: "Placeholder"),
+            filter: AspectScaledToFillSizeFilter(size: size),
+            imageTransition: .CrossDissolve(0.6)
+        )
     }
 
 }

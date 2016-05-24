@@ -24,6 +24,8 @@ class DetailArtObjectViewController : UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var favouriteButton: FavoriteButton!
+    
     var artObject: ArtworkRealm!
     
     override func viewDidLoad() {
@@ -38,16 +40,20 @@ class DetailArtObjectViewController : UIViewController {
         }
         addressLabel.text = artObject.address
         
+        if (artObject.favourite) {
+            favouriteButton.selected = true
+        } else {
+            favouriteButton.selected = false
+        }
+        
         mapView.addAnnotation(ArtWorkAnnotation(artWork: artObject))
         mapView.scrollEnabled = false
         mapView.zoomEnabled = true
         centerMapOnLocation(mapView, location: CLLocation(latitude: artObject.lat, longitude: artObject.lng), regionRadius: 2000)
         
-        let url = artObject.photos[0].url
-        
         let size = CGSize(width: imageView.bounds.width, height: imageView.bounds.height)
         imageView.af_setImageWithURL(
-            NSURL(string: url)!,
+            NSURL(string: artObject.photoUrl)!,
             placeholderImage: UIImage(named: "Placeholder"),
             filter: AspectScaledToFillSizeFilter(size: size),
             imageTransition: .CrossDissolve(0.6)

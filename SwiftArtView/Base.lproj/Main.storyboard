@@ -219,10 +219,27 @@
                                                     <constraint firstAttribute="height" constant="300" id="wFo-S3-Wm3"/>
                                                 </constraints>
                                             </mapView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNY-4t-xF0" customClass="FavoriteButton" customModule="SwiftArtView" customModuleProvider="target">
+                                                <rect key="frame" x="548" y="308" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="8Aa-Hb-EvV"/>
+                                                    <constraint firstAttribute="width" constant="44" id="ccw-ZG-s1G"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_star"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="imageColorOff">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="d7h-Vo-iXt" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" constant="8" id="0K3-co-615"/>
+                                            <constraint firstAttribute="trailing" secondItem="tNY-4t-xF0" secondAttribute="trailing" constant="8" id="0pd-2T-DHi"/>
                                             <constraint firstAttribute="height" constant="724" id="CVF-nj-VqR"/>
                                             <constraint firstItem="J6c-re-Aap" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" constant="8" id="Dv3-32-D8K"/>
                                             <constraint firstAttribute="trailing" secondItem="J6c-re-Aap" secondAttribute="trailing" constant="8" id="FYf-Vc-mVF"/>
@@ -233,6 +250,7 @@
                                             <constraint firstItem="uPd-rz-8AB" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" constant="8" id="fAH-9b-Xfc"/>
                                             <constraint firstItem="zGE-ca-FcN" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" id="hFj-nc-9xf"/>
                                             <constraint firstAttribute="trailing" secondItem="dMQ-89-qIz" secondAttribute="trailing" id="hl2-oD-76i"/>
+                                            <constraint firstItem="tNY-4t-xF0" firstAttribute="top" secondItem="zGE-ca-FcN" secondAttribute="bottom" constant="8" id="i3b-hd-vNk"/>
                                             <constraint firstAttribute="bottom" secondItem="dMQ-89-qIz" secondAttribute="bottom" id="k9n-XC-mlo"/>
                                             <constraint firstItem="uPd-rz-8AB" firstAttribute="top" secondItem="c1z-tc-KjP" secondAttribute="bottom" constant="8" id="kTo-GD-yWq"/>
                                             <constraint firstItem="c1z-tc-KjP" firstAttribute="top" secondItem="d7h-Vo-iXt" secondAttribute="bottom" constant="8" id="lUu-te-jeO"/>
@@ -283,6 +301,7 @@
                         <outlet property="addressLabel" destination="uPd-rz-8AB" id="JEX-BE-Usl"/>
                         <outlet property="authorLabel" destination="d7h-Vo-iXt" id="C8w-RU-e0k"/>
                         <outlet property="descriptionLabel" destination="c1z-tc-KjP" id="4wm-iK-9nk"/>
+                        <outlet property="favouriteButton" destination="tNY-4t-xF0" id="HEz-v6-Aqb"/>
                         <outlet property="imageView" destination="zGE-ca-FcN" id="eg4-Ve-Kco"/>
                         <outlet property="mapView" destination="dMQ-89-qIz" id="mvO-dS-jkM"/>
                         <outlet property="titleLabel" destination="J6c-re-Aap" id="WeT-tW-zW0"/>
