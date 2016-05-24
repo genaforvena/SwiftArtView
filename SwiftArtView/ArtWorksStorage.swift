@@ -18,8 +18,7 @@ class ArtWorksStorage {
     }
     
     func listFavourites() -> Results<ArtworkRealm> {
-        // TODO filter results
-        return realm.objects(ArtworkRealm)
+        return realm.objects(ArtworkRealm).filter("favourite == true")
     }
     
     func insertArtworks(artworks: [ArtWork]) {

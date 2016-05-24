@@ -18,6 +18,7 @@ class ArtworkRealm : Object {
     dynamic var address: String = ""
     dynamic var authors: String = ""
     let photos = List<PhotoRealm>()
+    dynamic var favourite: Bool = false
     
     override static func primaryKey() -> String? {
         return "id"
