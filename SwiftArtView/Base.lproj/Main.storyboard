@@ -257,11 +257,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Second-->
+        <!--Gallery-->
         <scene sceneID="Aty-Tb-AIm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hD3-g5-1kD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="ic_visibility" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5L0-A1-YGa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -276,11 +276,11 @@
             </objects>
             <point key="canvasLocation" x="734" y="508"/>
         </scene>
-        <!--First-->
+        <!--Map-->
         <scene sceneID="HbE-ze-UGn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UdL-08-aqT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="ic_explore" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACj-u5-gIT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -297,8 +297,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="ic_explore" width="24" height="24"/>
+        <image name="ic_visibility" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AyI-Eu-iDg"/>
