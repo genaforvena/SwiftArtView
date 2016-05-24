@@ -16,16 +16,12 @@ final class ArtObjectCell : UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
     override func prepareForReuse() {
         super.prepareForReuse()
     }
     
     func configureWithArtWork(artWork: ArtworkRealm) {
         self.artWork = artWork
-        
-        nameLabel.text = artWork.name
         
         if artWork.photos.count > 0 {
             let url = artWork.photos[0].url

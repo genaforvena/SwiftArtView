@@ -27,6 +27,7 @@
 		74C059041CF1C4D800BA6BB7 /* PhotoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059031CF1C4D800BA6BB7 /* PhotoRealm.swift */; };
 		74C059081CF2067F00BA6BB7 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059071CF2067F00BA6BB7 /* Author.swift */; };
 		74C0590A1CF20BE000BA6BB7 /* ArtWorkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059091CF20BE000BA6BB7 /* ArtWorkAnnotation.swift */; };
+		74C059161CF4466C00BA6BB7 /* FavouritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C059151CF4466C00BA6BB7 /* FavouritesListViewController.swift */; };
 		C29A4F281FED13E9E047EF0C /* Pods_SwiftArtView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB20178AA8360D0108354EA /* Pods_SwiftArtView.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		74C059031CF1C4D800BA6BB7 /* PhotoRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRealm.swift; sourceTree = "<group>"; };
 		74C059071CF2067F00BA6BB7 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		74C059091CF20BE000BA6BB7 /* ArtWorkAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWorkAnnotation.swift; sourceTree = "<group>"; };
+		74C059151CF4466C00BA6BB7 /* FavouritesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesListViewController.swift; sourceTree = "<group>"; };
 		7AB20178AA8360D0108354EA /* Pods_SwiftArtView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftArtView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 			children = (
 				7471BE5A1CE4D9CA00D16775 /* ArtMapViewController.swift */,
 				7471BE5C1CE4D9CA00D16775 /* ArtListViewController.swift */,
+				74C059151CF4466C00BA6BB7 /* FavouritesListViewController.swift */,
 				7453063A1CE5E0B500609C18 /* DetailArtObjectViewController.swift */,
 			);
 			name = "View Controllers";
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C059161CF4466C00BA6BB7 /* FavouritesListViewController.swift in Sources */,
 				745306391CE5AF0C00609C18 /* Photo.swift in Sources */,
 				745306371CE5A06E00609C18 /* ArtObjectCell.swift in Sources */,
 				745306321CE5962F00609C18 /* StreetArtViewAPI.swift in Sources */,

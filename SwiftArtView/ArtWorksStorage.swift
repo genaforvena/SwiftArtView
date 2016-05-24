@@ -17,6 +17,11 @@ class ArtWorksStorage {
         return realm.objects(ArtworkRealm)
     }
     
+    func listFavourites() -> Results<ArtworkRealm> {
+        // TODO filter results
+        return realm.objects(ArtworkRealm)
+    }
+    
     func insertArtworks(artworks: [ArtWork]) {
         realm.beginWrite()
         
