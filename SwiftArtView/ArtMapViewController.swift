@@ -12,7 +12,7 @@ import RealmSwift
 
 let nizhnyNovgorod = CLLocation(latitude: 56.327530, longitude: 44.000717)
 
-class ArtMapViewController: UIViewController, MKMapViewDelegate {
+class ArtMapViewController: UIViewController {
 
     @IBOutlet var mapView: MKMapView!
     let regionRadius : Double = 6000
@@ -23,17 +23,19 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
     }
     
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
-        if control == view.rightCalloutAccessoryView {
-            performSegueWithIdentifier("DetailArtObjectFromMap", sender: view)
-        }
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DetailArtObjectFromMap" {
             let destinationController = segue.destinationViewController as! DetailArtObjectViewController
             destinationController.hidesBottomBarWhenPushed = true
             destinationController.artObject = ((sender as! MKAnnotationView).annotation as! ArtWorkAnnotation).artwork
+        }
+    }
+}
+
+extension ArtMapViewController: MKMapViewDelegate {
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
+        if control == view.rightCalloutAccessoryView {
+            performSegueWithIdentifier("DetailArtObjectFromMap", sender: view)
         }
     }
 }

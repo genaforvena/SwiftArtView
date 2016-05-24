@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ArtListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ArtListViewController: UICollectionViewController {
     
     // MARK: Properties
     static let emptyFooterReusableID = "EmptyFooter"
@@ -33,10 +33,8 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
         collectionView!.addSubview(refreshControl!)
         
         collectionView!.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: ArtListViewController.emptyFooterReusableID)
-        
         collectionView!.delegate = self
         
-        // Fetch friends and favorite products from the API.
         fetchArtWorks()
     }
     
@@ -65,17 +63,6 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
         cell.configureWithArtWork(artWork)
     }
     
-    // MARK: UICollectionViewDelegateFlowLayout
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width = (view.bounds.width - 3) / 3
-        return CGSize(width: width, height: width)
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height)
-    }
-    
     // MARK: UIStoryboardSegue Handling
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -88,7 +75,6 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
     
     // MARK: API
     
-    // We need to upload the contacts before this.
     func fetchArtWorks() {
         self.refreshControl!.beginRefreshing()
         self.artWorks = ArtWorksStorage.instance.listArtWorks()
@@ -100,6 +86,17 @@ class ArtListViewController: UICollectionViewController, UICollectionViewDelegat
             self.artWorks = ArtWorksStorage.instance.listArtWorks()
             self.refreshControl!.endRefreshing()
         }
+    }
+}
+
+extension ArtListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let width = (view.bounds.width - 3) / 3
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height)
     }
 }
 
