@@ -39,6 +39,8 @@ class DetailArtObjectViewController : UIViewController {
         addressLabel.text = artObject.address
         
         mapView.addAnnotation(ArtWorkAnnotation(artWork: artObject))
+        mapView.scrollEnabled = false
+        mapView.zoomEnabled = true
         centerMapOnLocation(mapView, location: CLLocation(latitude: artObject.lat, longitude: artObject.lng), regionRadius: 2000)
         
         let url = artObject.photos[0].url

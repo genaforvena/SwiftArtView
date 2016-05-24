@@ -19,8 +19,15 @@ class ArtMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        centerMapOnLocation(mapView, location: nizhnyNovgorod, regionRadius: regionRadius)
         mapView.delegate = self
+        
+        let locationMgr = CLLocationManager.init()
+        locationMgr.requestAlwaysAuthorization()
+        
+        centerMapOnLocation(mapView, location: nizhnyNovgorod, regionRadius: regionRadius)
+        mapView.showsUserLocation = true
+        mapView.scrollEnabled = true
+        mapView.zoomEnabled = true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
