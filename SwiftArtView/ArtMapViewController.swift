@@ -17,38 +17,10 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
     let regionRadius : Double = 6000
     
-    var artWorks: Results<ArtworkRealm>! {
-        didSet {
-            artWorks.forEach { artwork in
-                mapView.addAnnotation(ArtWorkAnnotation(artWork: artwork))
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         centerMapOnLocation(mapView, location: nizhnyNovgorod, regionRadius: regionRadius)
         mapView.delegate = self
-        fetchArtWorks()
-    }
-    
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? ArtWorkAnnotation {
-            let identifier = "pin"
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
-                as? MKPinAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton.init(type: .DetailDisclosure) as UIView
-            }
-            return view
-        }
-        return nil
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
@@ -63,10 +35,6 @@ class ArtMapViewController: UIViewController, MKMapViewDelegate {
             destinationController.hidesBottomBarWhenPushed = true
             destinationController.artObject = ((sender as! MKAnnotationView).annotation as! ArtWorkAnnotation).artwork
         }
-    }
-    
-    func fetchArtWorks() {
-        self.artWorks = ArtWorksStorage.instance.listArtWorks()
     }
 }
 
