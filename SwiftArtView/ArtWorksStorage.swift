@@ -21,6 +21,12 @@ class ArtWorksStorage {
         return realm.objects(ArtworkRealm).filter("favourite == true")
     }
     
+    func setFavourite(artworkId: String, isFavourite: Bool) {
+        try! realm.write {
+            realm.create(ArtworkRealm.self, value: ["id": artworkId, "favourite": isFavourite], update: true)
+        }
+    }
+    
     func insertArtworks(artworks: [ArtWork]) {
         realm.beginWrite()
         

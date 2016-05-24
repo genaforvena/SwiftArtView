@@ -114,11 +114,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftArtView/ArtWorksStorage.swift"
-            timestampString = "485800691.839179"
+            timestampString = "485801310.474997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "insertArtworks(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -137,6 +137,70 @@
             endingLineNumber = "17"
             landmarkName = "listArtWorks()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftArtView/DetailArtObjectViewController.swift"
+            timestampString = "485801495.683468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "favouriteButtonPressed(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftArtView/ArtWorksStorage.swift"
+            timestampString = "485801787.012269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "setFavourite(_:isFavourite:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftArtView.ArtWorksStorage.setFavourite (Swift.String, isFavourite : Swift.Bool) -&gt; ()"
+                  moduleName = "SwiftArtView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imozerov/Developer/SwiftArtView/SwiftArtView/ArtWorksStorage.swift"
+                  timestampString = "485801787.024169"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftArtView.ArtWorksStorage.(setFavourite (Swift.String, isFavourite : Swift.Bool) -&gt; ()).(closure #1)"
+                  moduleName = "SwiftArtView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imozerov/Developer/SwiftArtView/SwiftArtView/ArtWorksStorage.swift"
+                  timestampString = "485801787.024421"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

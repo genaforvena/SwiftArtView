@@ -45,6 +45,7 @@ class DetailArtObjectViewController : UIViewController {
         } else {
             favouriteButton.selected = false
         }
+        favouriteButton.addTarget(self, action: #selector(favouriteButtonPressed), forControlEvents: .TouchUpInside)
         
         mapView.addAnnotation(ArtWorkAnnotation(artWork: artObject))
         mapView.scrollEnabled = false
@@ -58,5 +59,15 @@ class DetailArtObjectViewController : UIViewController {
             filter: AspectScaledToFillSizeFilter(size: size),
             imageTransition: .CrossDissolve(0.6)
         )
+    }
+    
+    func favouriteButtonPressed(sender: FavoriteButton) {
+        if sender.selected {
+            ArtWorksStorage.instance.setFavourite(artObject.id, isFavourite: true)
+            sender.deselect()
+        } else {
+            ArtWorksStorage.instance.setFavourite(artObject.id, isFavourite: false)
+            sender.select()
+        }
     }
 }
