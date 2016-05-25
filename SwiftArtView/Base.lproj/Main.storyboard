@@ -102,8 +102,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAo-FH-VDp">
-                                            <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YAo-FH-VDp">
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="YAo-FH-VDp" secondAttribute="height" id="WAM-4k-pKK"/>
                                             </constraints>
@@ -424,6 +424,6 @@
         <image name="ic_visibility" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VYU-md-hdD"/>
+        <segue reference="eDN-9h-pZr"/>
     </inferredMetricsTieBreakers>
 </document>

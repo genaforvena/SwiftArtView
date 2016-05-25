@@ -13,6 +13,10 @@ class ArtWorksStorage {
     static let instance = ArtWorksStorage()
     let realm = try! Realm()
     
+    func listenChanges(block: NotificationBlock) -> NotificationToken {
+        return realm.addNotificationBlock(block)
+    }
+    
     func listArtWorks() -> Results<ArtworkRealm> {
         return realm.objects(ArtworkRealm)
     }
@@ -21,9 +25,10 @@ class ArtWorksStorage {
         return realm.objects(ArtworkRealm).filter("favourite == true")
     }
     
-    func setFavourite(artworkId: String, isFavourite: Bool) {
+    func setFavourite(artwork: ArtworkRealm, isFavourite: Bool) {
+        print("Setting favourite for " + artwork.id)
         try! realm.write {
-            realm.create(ArtworkRealm.self, value: ["id": artworkId, "favourite": isFavourite], update: true)
+            artwork.favourite = isFavourite
         }
     }
     

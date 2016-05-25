@@ -63,10 +63,10 @@ class DetailArtObjectViewController : UIViewController {
     
     func favouriteButtonPressed(sender: FavoriteButton) {
         if sender.selected {
-            ArtWorksStorage.instance.setFavourite(artObject.id, isFavourite: true)
+            ArtWorksStorage.instance.setFavourite(artObject, isFavourite: false)
             sender.deselect()
         } else {
-            ArtWorksStorage.instance.setFavourite(artObject.id, isFavourite: false)
+            ArtWorksStorage.instance.setFavourite(artObject, isFavourite: true)
             sender.select()
         }
     }

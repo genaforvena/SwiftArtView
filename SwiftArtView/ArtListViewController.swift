@@ -21,6 +21,7 @@ class ArtListViewController: UICollectionViewController {
     }
     
     var refreshControl: UIRefreshControl?
+    var realmToken: NotificationToken?
     
     // MARK: View Life Cycle
     
@@ -35,12 +36,21 @@ class ArtListViewController: UICollectionViewController {
         collectionView!.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: ArtListViewController.emptyFooterReusableID)
         collectionView!.delegate = self
         
+        realmToken = ArtWorksStorage.instance.listenChanges { notifcation, block in
+            print("Realm has changed. Refetching objects.")
+            self.fetchArtWorks()
+        }
+        
         fetchArtWorks()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchArtWorks()
+    }
+    
+    deinit {
+        realmToken?.stop()
     }
     
     // MARK: UICollectionViewDataSource
