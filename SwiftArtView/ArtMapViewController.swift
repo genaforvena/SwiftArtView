@@ -12,20 +12,26 @@ import RealmSwift
 
 let nizhnyNovgorod = CLLocation(latitude: 56.327530, longitude: 44.000717)
 
-class ArtMapViewController: UIViewController {
+class ArtMapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var mapView: MKMapView!
     let regionRadius : Double = 6000
     
+    let locationMgr = CLLocationManager.init()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         
-        let locationMgr = CLLocationManager.init()
-        locationMgr.requestAlwaysAuthorization()
+        self.locationMgr.requestAlwaysAuthorization()
+        self.locationMgr.requestWhenInUseAuthorization()
+        self.locationMgr.delegate = self
+        
+        if CLLocationManager.locationServicesEnabled() {
+            mapView.showsUserLocation = true
+        }
         
         centerMapOnLocation(mapView, location: nizhnyNovgorod, regionRadius: regionRadius)
-        mapView.showsUserLocation = true
         mapView.scrollEnabled = true
         mapView.zoomEnabled = true
     }
@@ -35,6 +41,12 @@ class ArtMapViewController: UIViewController {
             let destinationController = segue.destinationViewController as! DetailArtObjectViewController
             destinationController.hidesBottomBarWhenPushed = true
             destinationController.artObject = ((sender as! MKAnnotationView).annotation as! ArtWorkAnnotation).artwork
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .AuthorizedAlways {
+            mapView.showsUserLocation = true
         }
     }
 }

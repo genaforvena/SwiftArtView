@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import AlamofireImage
 
-class DetailArtObjectViewController : UIViewController {
+class DetailArtObjectViewController : UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -26,10 +26,22 @@ class DetailArtObjectViewController : UIViewController {
     
     @IBOutlet weak var favouriteButton: FavoriteButton!
     
+    @IBOutlet weak var distanceToLabel: UILabel!
+    
     var artObject: ArtworkRealm!
+    
+    let locationManager = CLLocationManager.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     
         titleLabel.text = artObject.name
         authorLabel.text = artObject.authors
@@ -69,5 +81,13 @@ class DetailArtObjectViewController : UIViewController {
             ArtWorksStorage.instance.setFavourite(artObject, isFavourite: true)
             sender.select()
         }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue = manager.location else {
+            print("Unable to get user location")
+            return
+        }
+        distanceToLabel.text = String(locValue.distanceFromLocation(CLLocation(latitude: artObject.lat, longitude: artObject.lng)))
     }
 }

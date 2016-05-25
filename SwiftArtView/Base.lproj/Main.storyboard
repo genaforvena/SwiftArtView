@@ -235,6 +235,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re9-3Z-gsw">
+                                                <rect key="frame" x="550" y="371" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -245,8 +251,10 @@
                                             <constraint firstAttribute="trailing" secondItem="J6c-re-Aap" secondAttribute="trailing" constant="8" id="FYf-Vc-mVF"/>
                                             <constraint firstAttribute="trailing" secondItem="zGE-ca-FcN" secondAttribute="trailing" id="I9j-yc-LeP"/>
                                             <constraint firstAttribute="trailing" secondItem="d7h-Vo-iXt" secondAttribute="trailing" constant="8" id="Iu1-db-bRd"/>
+                                            <constraint firstAttribute="trailing" secondItem="re9-3Z-gsw" secondAttribute="trailing" constant="8" id="Km3-K8-yau"/>
                                             <constraint firstAttribute="trailing" secondItem="uPd-rz-8AB" secondAttribute="trailing" constant="8" id="MlH-HK-pb0"/>
                                             <constraint firstItem="dMQ-89-qIz" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" id="Vk3-mA-SeK"/>
+                                            <constraint firstItem="uPd-rz-8AB" firstAttribute="top" secondItem="re9-3Z-gsw" secondAttribute="bottom" constant="3" id="XaQ-ku-KK4"/>
                                             <constraint firstItem="uPd-rz-8AB" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" constant="8" id="fAH-9b-Xfc"/>
                                             <constraint firstItem="zGE-ca-FcN" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" id="hFj-nc-9xf"/>
                                             <constraint firstAttribute="trailing" secondItem="dMQ-89-qIz" secondAttribute="trailing" id="hl2-oD-76i"/>
@@ -301,6 +309,7 @@
                         <outlet property="addressLabel" destination="uPd-rz-8AB" id="JEX-BE-Usl"/>
                         <outlet property="authorLabel" destination="d7h-Vo-iXt" id="C8w-RU-e0k"/>
                         <outlet property="descriptionLabel" destination="c1z-tc-KjP" id="4wm-iK-9nk"/>
+                        <outlet property="distanceToLabel" destination="re9-3Z-gsw" id="Ydz-QG-gfK"/>
                         <outlet property="favouriteButton" destination="tNY-4t-xF0" id="HEz-v6-Aqb"/>
                         <outlet property="imageView" destination="zGE-ca-FcN" id="eg4-Ve-Kco"/>
                         <outlet property="mapView" destination="dMQ-89-qIz" id="mvO-dS-jkM"/>
@@ -424,6 +433,6 @@
         <image name="ic_visibility" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eDN-9h-pZr"/>
+        <segue reference="AyI-Eu-iDg"/>
     </inferredMetricsTieBreakers>
 </document>
