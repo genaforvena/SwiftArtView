@@ -56,6 +56,12 @@ class ArtWorksStorage {
                 realmArtwork.authors = authors
             }
             
+            guard let objectWas = realm.objects(ArtworkRealm.self).filter("id = %@", artwork.id).first else {
+                realm.add(realmArtwork, update: true)
+                continue
+            }
+            
+            realmArtwork.favourite = objectWas.favourite
             realm.add(realmArtwork, update: true)
         }
     
