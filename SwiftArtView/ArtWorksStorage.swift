@@ -18,11 +18,11 @@ class ArtWorksStorage {
     }
     
     func listArtWorks() -> Results<ArtworkRealm> {
-        return realm.objects(ArtworkRealm)
+        return realm.objects(ArtworkRealm).sorted("updatedAt", ascending: false)
     }
     
     func listFavourites() -> Results<ArtworkRealm> {
-        return realm.objects(ArtworkRealm).filter("favourite == true")
+        return realm.objects(ArtworkRealm).sorted("updatedAt", ascending: false).filter("favourite == true")
     }
     
     func setFavourite(artwork: ArtworkRealm, isFavourite: Bool) {
@@ -40,7 +40,7 @@ class ArtWorksStorage {
             realmArtwork.id = artwork.id
             realmArtwork.name = artwork.name
             realmArtwork.desc = artwork.description
-            
+            realmArtwork.updatedAt = artwork.updatedAt
             realmArtwork.address = artwork.location.address
             realmArtwork.lat = artwork.location.lat
             realmArtwork.lng = artwork.location.lng

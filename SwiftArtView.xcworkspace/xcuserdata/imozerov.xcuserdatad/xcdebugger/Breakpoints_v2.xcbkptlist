@@ -146,11 +146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftArtView/DetailArtObjectViewController.swift"
-            timestampString = "486046423.086885"
+            timestampString = "486047491.979944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "favouriteButtonPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -242,7 +242,7 @@
                   moduleName = "SwiftArtView"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/imozerov/Developer/SwiftArtView/SwiftArtView/ArtListViewController.swift"
-                  timestampString = "486042591.28889"
+                  timestampString = "486047496.617267"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -257,12 +257,12 @@
                   moduleName = "SwiftArtView"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/imozerov/Developer/SwiftArtView/SwiftArtView/ArtListViewController.swift"
-                  timestampString = "486042591.28922"
+                  timestampString = "486047496.617483"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
                   endingLineNumber = "100"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "19">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -328,6 +328,22 @@
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "collectionView(_:willDisplayCell:forItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftArtView/ArtWorksStorage.swift"
+            timestampString = "486047245.969171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "listFavourites()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
