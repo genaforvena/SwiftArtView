@@ -241,12 +241,21 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn1-4n-gR6">
+                                                <rect key="frame" x="500" y="315" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="share:" destination="6Qp-YQ-FQl" eventType="touchUpInside" id="hYz-xk-qPo"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="d7h-Vo-iXt" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" constant="8" id="0K3-co-615"/>
                                             <constraint firstAttribute="trailing" secondItem="tNY-4t-xF0" secondAttribute="trailing" constant="8" id="0pd-2T-DHi"/>
+                                            <constraint firstItem="gn1-4n-gR6" firstAttribute="centerY" secondItem="tNY-4t-xF0" secondAttribute="centerY" id="5gZ-LA-9zU"/>
                                             <constraint firstAttribute="height" constant="724" id="CVF-nj-VqR"/>
+                                            <constraint firstItem="tNY-4t-xF0" firstAttribute="leading" secondItem="gn1-4n-gR6" secondAttribute="trailing" constant="2" id="DCp-qn-hLM"/>
                                             <constraint firstItem="J6c-re-Aap" firstAttribute="leading" secondItem="b4P-Z7-Rb3" secondAttribute="leading" constant="8" id="Dv3-32-D8K"/>
                                             <constraint firstAttribute="trailing" secondItem="J6c-re-Aap" secondAttribute="trailing" constant="8" id="FYf-Vc-mVF"/>
                                             <constraint firstAttribute="trailing" secondItem="zGE-ca-FcN" secondAttribute="trailing" id="I9j-yc-LeP"/>

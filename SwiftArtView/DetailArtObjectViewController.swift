@@ -73,6 +73,17 @@ class DetailArtObjectViewController : UIViewController, CLLocationManagerDelegat
         )
     }
     
+    @IBAction func share(sender: UIButton) {
+        let textToShare = "\(artObject.name) \n\(artObject.address)"
+        
+        // TODO share image also
+        let objectsToShare = [textToShare]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+        activityVC.popoverPresentationController?.sourceView = sender
+        self.presentViewController(activityVC, animated: true, completion: nil)
+    }
+    
     func favouriteButtonPressed(sender: FavoriteButton) {
         if sender.selected {
             ArtWorksStorage.instance.setFavourite(artObject, isFavourite: false)
