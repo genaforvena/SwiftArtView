@@ -20,13 +20,13 @@ class DetailArtObjectViewController : UIViewController, CLLocationManagerDelegat
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBOutlet weak var addressLabel: UILabel!
-    
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var favouriteButton: FavoriteButton!
     
     @IBOutlet weak var distanceToLabel: UILabel!
+    
+    @IBOutlet weak var addressButton: UIButton!
     
     var artObject: ArtworkRealm!
     
@@ -50,7 +50,7 @@ class DetailArtObjectViewController : UIViewController, CLLocationManagerDelegat
         } else {
             descriptionLabel.text = artObject.desc
         }
-        addressLabel.text = artObject.address
+        addressButton.setTitle(artObject.address, forState: .Normal)
         
         if (artObject.favourite) {
             favouriteButton.selected = true
@@ -71,6 +71,15 @@ class DetailArtObjectViewController : UIViewController, CLLocationManagerDelegat
             filter: AspectScaledToFillSizeFilter(size: size),
             imageTransition: .CrossDissolve(0.6)
         )
+    }
+    
+    @IBAction func navigateTo(sender: UIButton) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                "comgooglemaps://?center=\(artObject.lat),\(artObject.lng)&zoom=14")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
     }
     
     @IBAction func share(sender: UIButton) {

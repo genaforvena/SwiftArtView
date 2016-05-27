@@ -146,11 +146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftArtView/DetailArtObjectViewController.swift"
-            timestampString = "486047491.979944"
+            timestampString = "486049654.415174"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "favouriteButtonPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
