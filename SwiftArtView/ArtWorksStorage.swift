@@ -38,8 +38,14 @@ class ArtWorksStorage {
         for artwork in artworks {
             let realmArtwork = ArtworkRealm()
             realmArtwork.id = artwork.id
-            realmArtwork.name = artwork.name
-            realmArtwork.desc = artwork.description
+            
+            realmArtwork.name = artwork.name.stringByTrimmingCharactersInSet(
+                NSCharacterSet.whitespaceAndNewlineCharacterSet()
+            )
+            realmArtwork.desc = artwork.description.stringByTrimmingCharactersInSet(
+                NSCharacterSet.whitespaceAndNewlineCharacterSet()
+            )
+
             realmArtwork.updatedAt = artwork.updatedAt
             realmArtwork.address = artwork.location.address
             realmArtwork.lat = artwork.location.lat
